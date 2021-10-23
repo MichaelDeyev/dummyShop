@@ -3,5 +3,13 @@ spring:
     url: r2dbc:postgresql://localhost:5432/shop
     username: postgres
     password: 123
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    url: jdbc:postgresql://localhost:5432/shop
+    user: postgres
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: validate
 server:
   port: 8080
