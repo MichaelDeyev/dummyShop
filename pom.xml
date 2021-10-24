@@ -59,14 +59,14 @@
                 <version>0.8.7</version>
                 <executions>
                     <execution>
-                        <id>report</id>
+                        <id>report1</id>
                         <goals>
                             <goal>report-aggregate</goal>
                         </goals>
                     </execution>
                     <!-- attached to Maven test phase -->
                     <execution>
-                        <id>report</id>
+                        <id>report2</id>
                         <phase>test</phase>
                         <goals>
                             <goal>report</goal>
