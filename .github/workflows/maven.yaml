@@ -4,12 +4,12 @@
 name: Kotlin CI with Maven
 
 on:
-  push:
-    branches: 
-      - '*'
   pull_request:
     branches: 
       - '*'
+  push:
+    branches: 
+      - 'master'
 
 jobs:
   build:
@@ -47,4 +47,3 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B clean package -DskipTests
-#       --file ./shop/pom.xml
