@@ -47,18 +47,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B clean package
-#      - name: Test Coverage via Codecov
-#        uses: codecov/codecov-action@v2.1.0
-#        with:
-#          token: ${{ secrets.CODECOV_TOKEN }}
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
+      - name: Test Coverage via Codecov
+        uses: codecov/codecov-action@v2.1.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage/reports/
-          fail_ci_if_error: true
-          files: ./coverage1.xml,./coverage2.xml
-          flags: unittests
-          name: codecov-umbrella
-          path_to_write_report: ./coverage/codecov_report.txt
-          verbose: true
